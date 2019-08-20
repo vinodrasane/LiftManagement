@@ -24,11 +24,11 @@ public class LiftThread implements Runnable{
 			while (lift.getStopages().size() > 0) {
 				liftService.start(lift);
 				liftService.move(lift);
-				LiftCallRequest stop = liftService.stop(lift);
+				LiftCallRequest floor = liftService.stop(lift);
 				if (lift.isTravellingEmpty()) {
-					liftService.loadPassengers(lift, stop.getDirection());
+					liftService.loadPassengers(lift, floor.getDirection());
 				} else {
-					liftService.loadUnloadPassengers(lift, stop.getDirection());
+					liftService.loadUnloadPassengers(lift, floor.getDirection());
 				}
 			}
 			liftService.idle(lift);
