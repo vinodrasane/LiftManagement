@@ -1,0 +1,15 @@
+server:
+  port: 8081
+lift:
+  management:
+    configuration:     
+      building:
+        floors: 100
+        no-of-lifts: 10
+        people-per-floor: 100
+       
+      lift:
+        passenger-capacity: 10
+        stopping-time: 2
+        acceleration-time: 2
+        travel-time-per-floor: 4
